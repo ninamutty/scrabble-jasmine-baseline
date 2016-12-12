@@ -13,7 +13,7 @@ var Scrabble = function() {
 Scrabble.prototype = {
   score: function(word) {
     if (typeof word !== 'string') {
-      throw new Error("Can Only Score Words");
+      throw new TypeError("Can Only Score Words");
     };
     var word = word.toUpperCase();
     var totalScore = 0;
@@ -70,7 +70,7 @@ module.exports = Scrabble;
 // console.log("####################################")
 //
 // var s = new Scrabble();
-// console.log(s.score("ZZZ"));
+// console.log(s.score(9));
 // console.log(s.highestScoreFrom(["ZZZ", "QQQ"])); // 'ZZZ'
 // console.log(s.highestScoreFrom(["cat", "aaaaa"])); // 'cat'
 // console.log(s.highestScoreFrom(["cat", "rat"])); // 'cat'

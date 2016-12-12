@@ -10,12 +10,12 @@ describe("Scrabble", function() {
 
     it('should throw an error when given an integer', function() {
       var testScrabble = new Scrabble();
-      expect(function() {testScrabble.score(9)} ).toThrow(new Error("Can Only Score Words"));
+      expect(function() {testScrabble.score(9)}).toThrow(TypeError("Can Only Score Words"));
     });
 
     it('should throw an error when not passed null', function() {
       var testScrabble = new Scrabble();
-      expect(function() {testScrabble.score()} ).toThrow(new Error("Can Only Score Words"));
+      expect(function() {testScrabble.score()}).toThrow(TypeError("Can Only Score Words"));
     });
   });
 
@@ -42,7 +42,7 @@ describe("Scrabble", function() {
 
     it('should throw an error when passed array of integers', function() {
       var testScrabble = new Scrabble();
-      expect(function() {testScrabble.highestScoreFrom([1, 2, 3])} ).toThrow(new Error("Can Only Score Words"));
+      expect(function() {testScrabble.highestScoreFrom([1, 2, 3])} ).toThrow(TypeError("Can Only Score Words"));
     });
   });
 
